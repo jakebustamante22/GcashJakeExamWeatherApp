@@ -1,5 +1,4 @@
 package com.example.gcashtestjweatherapp.utils
 
-object Constants {
-    const val BASE_URL = "https://goweather.herokuapp.com/"
-}
+
+const val GPS_REQUEST_CHECK_SETTINGS = 102

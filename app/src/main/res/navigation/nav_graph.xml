@@ -16,26 +16,44 @@
     </fragment>
 
     <fragment
-        android:id="@+id/userDetailsFragment"
-        android:name="com.example.gcashtestjweatherapp.ui.weather.UserDetailsFragment"
-        android:label="user_details_fragment"
-        tools:layout="@layout/user_details_fragment">
+        android:id="@+id/loginFragment"
+        android:name="com.example.gcashtestjweatherapp.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="com.example.gcashtestjweatherapp.ui.forecast.ForecastFragment"
+        android:label="forecast_fragment"
+        tools:layout="@layout/fragment_forecast">
+
         <action
             android:id="@+id/action_userDetailsFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.gcashtestjweatherapp.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:id="@+id/homeFragment"
+        android:name="com.example.gcashtestjweatherapp.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/registerFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_userDetailsFragment"
-            app:destination="@id/userDetailsFragment" />
+            android:id="@+id/action_homeFragment_to_ForecastFragment"
+            app:destination="@id/forecastFragment" />
     </fragment>
+
 
 </navigation>

@@ -28,13 +28,12 @@ class RegisterViewModel(private val repository: RegisterRepository, application:
 
     var userDetailsLiveData = MutableLiveData<Array<RegisterEntity>>()
 
-    val
-
-
 //    The Bindable annotation should be applied to any getter accessor method of an Observable class. Bindable will generate a field in the BR class to identify the field that has changed.
 //
 //    When applied to an accessor method, the Bindable annotation takes an optional list of property names that it depends on. If there is a change notification of any of the listed properties, this value will also be considered dirty and be refreshed. For example:
-    @Bindable
+//
+
+@Bindable
     val inputFirstName = MutableLiveData<String>()
 
     @Bindable
